@@ -586,7 +586,15 @@ p {
 }
 .footer-col h5 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.2em; color: var(--text-pure); margin-bottom: 24px; }
 .f-links { display: flex; flex-direction: column; gap: 16px; }
-.f-links a { color: var(--text-secondary); font-size: 1.05rem; position: relative; width: fit-content; }
+.f-links a { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  color: var(--text-secondary); 
+  font-size: 1.05rem; 
+  position: relative; 
+  width: fit-content; 
+}
 .f-links a::after {
   content: ''; position: absolute; bottom: -4px; left: 0; width: 0%; height: 1px;
   background: var(--primary); transition: width var(--dur-fast) ease;
