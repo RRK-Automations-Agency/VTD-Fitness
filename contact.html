@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <title>Transmit — VTD Fitness</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +38,9 @@
             <i class="fas fa-location-crosshairs"></i>
             <div>
               <strong>Location</strong>
-              <span>15-104/1, Vandanapuri Colony, Pochamma Temple, Beeranguda, Ameenapur, PO: Ameenpur, DIST: Sangareddy, Telangana - 502032</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=15-104/1,+Vandanapuri+Colony,+Pochamma+Temple,+Beeranguda,+Ameenapur,+PO:+Ameenpur,+DIST:+Sangareddy,+Telangana+-+502032" target="_blank" style="color: inherit; text-decoration: none;">
+                15-104/1, Vandanapuri Colony, Pochamma Temple, Beeranguda, Ameenapur, PO: Ameenpur, DIST: Sangareddy, Telangana - 502032
+              </a>
             </div>
           </div>
 
@@ -64,23 +67,23 @@
       <!-- Transmission Form -->
       <div class="glass-panel contact-form anim-el" style="transition-delay: 0.2s;">
         <h3 class="text-gradient" style="margin-bottom: 32px; font-size: 1.8rem;">Send Message</h3>
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/Vtdfitnessolutionspvt.ltd@gmail.com" method="POST">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Name</label>
-              <input type="text" id="name" required placeholder="John Doe">
+              <input type="text" id="name" name="Name" required placeholder="John Doe">
             </div>
             <div class="form-group">
               <label for="phone">Phone</label>
-              <input type="tel" id="phone" required placeholder="+91 XXXXX XXXXX">
+              <input type="tel" id="phone" name="Phone" required placeholder="+91 XXXXX XXXXX">
             </div>
             <div class="form-group full">
               <label for="email">Email</label>
-              <input type="email" id="email" required placeholder="john@example.com">
+              <input type="email" id="email" name="Email" required placeholder="john@example.com">
             </div>
             <div class="form-group full">
               <label for="message">Message</label>
-              <textarea id="message" rows="5" required placeholder="Describe your structural requirements..."></textarea>
+              <textarea id="message" name="Message" rows="5" required placeholder="Describe your structural requirements..."></textarea>
             </div>
             <div class="form-group full" style="margin-bottom: 0; margin-top: 16px;">
               <button type="submit" class="btn btn--primary" style="width: 100%;">

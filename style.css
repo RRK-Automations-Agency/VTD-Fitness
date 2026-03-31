@@ -5,6 +5,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
 
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+
 /* ─── DESIGN TOKENS ───────────────────────────── */
 :root {
   /* Typography */
@@ -667,12 +670,13 @@ body:hover .custom-cursor, body:hover .custom-cursor-follower { opacity: 1; }
   display: flex; gap: 24px; align-items: flex-start; padding: 32px;
   background: var(--bg-glass); border: 1px solid var(--border-light); border-radius: var(--radius-md);
   margin-bottom: 24px; transition: var(--dur-fluid) var(--ease-fluid);
-  min-width: 0; /* Allow container to shrink */
-  word-break: break-word;
+  min-width: 0;
   overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 .contact-info-card div { min-width: 0; flex: 1; }
-.contact-info-card span { display: block; word-break: break-all; }
+.contact-info-card a, .contact-info-card span { display: block; word-break: break-all; }
 .contact-info-card:hover { border-color: var(--border-hover); background: var(--bg-glass-hover); transform: translateX(8px); }
 .contact-info-card i {
   font-size: 1.5rem; color: var(--primary); width: 64px; height: 64px;

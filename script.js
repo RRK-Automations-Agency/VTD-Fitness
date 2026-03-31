@@ -142,24 +142,53 @@ document.addEventListener('DOMContentLoaded', async () => {
   const initForm = () => {
     const form = document.getElementById('contactForm');
     if (form) {
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = form.querySelector('button[type="submit"]');
         const ogText = btn.innerHTML;
-        btn.innerHTML = 'Sending...';
-        btn.style.pointerEvents = 'none';
         
-        setTimeout(() => {
-          btn.innerHTML = 'Message Received <i class="fas fa-check"></i>';
-          btn.style.boxShadow = 'inset 0 0 0 1px #25D366';
-          
-          setTimeout(() => {
+        // UI Feedback
+        btn.innerHTML = 'Transmitting... <i class="fas fa-spinner fa-spin"></i>';
+        btn.style.pointerEvents = 'none';
+        btn.style.opacity = '0.7';
+
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData.entries());
+
+        try {
+          // 1. Submit to Formspree for Email Delivery
+          const response = await fetch(form.action, {
+            method: 'POST',
+            body: JSON.stringify(data),
+            headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+          });
+
+          // 2. Submit to local API for Database storage (redundancy)
+          fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ...data, type: 'contact' })
+          }).catch(err => console.warn("Local DB Save failed, but Email sent."));
+
+          if (response.ok) {
+            btn.innerHTML = 'Message Received <i class="fas fa-check"></i>';
+            btn.style.boxShadow = 'inset 0 0 0 1px #25D366';
+            btn.style.opacity = '1';
             form.reset();
+          } else {
+            throw new Error('Transmission Failed');
+          }
+        } catch (error) {
+          btn.innerHTML = 'Transmission Error <i class="fas fa-exclamation-triangle"></i>';
+          btn.style.boxShadow = 'inset 0 0 0 1px #ff4b2b';
+        } finally {
+          setTimeout(() => {
             btn.innerHTML = ogText;
             btn.style.pointerEvents = 'auto';
             btn.style.boxShadow = '';
-          }, 3000);
-        }, 1500);
+            btn.style.opacity = '1';
+          }, 4000);
+        }
       });
     }
   };
