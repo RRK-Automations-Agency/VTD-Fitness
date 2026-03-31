@@ -1,9 +1,0 @@
-# Server-side files (not needed for static deployment)
-server.js
-database.js
-package.json
-package-lock.json
-node_modules
-vtd_fitness.db
-vtd_fitness.db-shm
-vtd_fitness.db-wal

@@ -172,6 +172,8 @@ p {
 /* ─── LAYOUT ──────────────────────────────────── */
 .container { max-width: var(--container); margin: 0 auto; padding: 0 4vw; }
 .section-padding { padding: 160px 0; position: relative; }
+.pt-0 { padding-top: 0 !important; }
+.pb-0 { padding-bottom: 0 !important; }
 @media (max-width: 768px) { .section-padding { padding: 100px 0; } }
 
 /* ─── HEADER (FLOATING GLASS ISLAND) ──────────── */
