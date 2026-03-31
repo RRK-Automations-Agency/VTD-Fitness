@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legacy — VTD Fitness</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="header"></header>
+
+  <section class="section-padding">
+    <div class="container split-section" style="align-items: start;">
+      <div class="split-img-wrapper anim-el" style="border-radius: 40px; overflow: hidden; height: auto; max-height: 75vh; aspect-ratio: 4/5; position: sticky; top: 100px;">
+        <!-- Scaled up 1.15x to push the watermark in the corner out of bounds off the image -->
+        <img src="INTURI%20REKHA.jpeg" 
+             alt="Inturi Rekha - Founder" style="object-position: top center; width: 100%; height: 100%; object-fit: cover; transform: scale(1.15) translate(-2%, 2%);">
+             
+        <!-- Model Identity Element overlay -->
+        <div class="hero-model-label anim-el" style="position: absolute; right: 8%; bottom: 8%; z-index: 2; text-align: right; border-right: 3px solid var(--primary); padding-right: 24px;">
+          <div style="font-family: var(--font-heading); font-size: clamp(1rem, 2.5vw, 2rem); font-weight: 800; color: var(--text-pure); letter-spacing: 0.02em; line-height: 1; text-shadow: 0px 2px 20px rgba(0,0,0,0.9), 0px 4px 50px rgba(0,0,0,1);">INTURI REKHA</div>
+          <div style="font-size: clamp(0.6rem, 1.1vw, 0.9rem); color: var(--primary); text-transform: uppercase; letter-spacing: 0.3em; font-weight: 700; margin-top: 8px; text-shadow: 0px 2px 10px rgba(0,0,0,0.9);">FOUNDER</div>
+        </div>
+      </div>
+      <div>
+        <span class="section-label anim-el">Founder Story</span>
+        <h2 class="section-title text-gradient split-text" style="font-size: clamp(2.5rem, 5vw, 4rem); margin-bottom: 8px;">Inturi Rekha</h2>
+        <h4 class="anim-el" style="color: var(--text-secondary); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.9rem;">Founder, VTD Fitness Solutions Private Limited</h4>
+        
+        <div class="anim-el" style="display: grid; grid-template-columns: 1fr; gap: 24px; color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+          <p>Every strong institution is built on the foundation of resilience, discipline, and vision. The journey of Inturi Rekha stands as a true reflection of these values.</p>
+          <p>Beginning her professional path in the field of powerlifting, Rekha demonstrated exceptional dedication and consistency from an early stage in her career. Through relentless training, unwavering focus, and a commitment to excellence, she quickly rose through the ranks in competitive powerlifting.</p>
+          <p>Her journey was not defined by shortcuts, but by discipline — early mornings, intense training sessions, and a continuous pursuit of improvement. Over the years, she established herself as a formidable athlete, earning recognition at district, state, and national levels.</p>
+          <p>As her career progressed, Rekha expanded her role beyond personal achievement. She took on leadership responsibilities in the fitness and sports ecosystem, contributing to the growth and promotion of powerlifting in Telangana.</p>
+          
+          <div style="padding: 32px; border-left: 3px solid var(--primary); background: rgba(255,255,255,0.02); margin: 8px 0;">
+            <p style="color: var(--text-pure); font-size: 1.15rem; font-style: italic; line-height: 1.6;">"This vision led to the foundation of VTD Fitness Solutions Private Limited — a company built with the mission of transforming fitness services through structure, accessibility, and professionalism."</p>
+          </div>
+
+          <p>Her story continues to inspire a new generation of athletes and entrepreneurs — proving that with vision, consistency, and hard work, it is possible to build something meaningful and impactful.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overriden padding-bottom to remove gap before the call-to-action block -->
+  <section class="section-padding" style="padding-bottom: 16px; background: var(--bg-elevated); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 80px;" class="anim-el">
+        <span class="section-label" style="justify-content: center;">Core Imperatives</span>
+        <h2 class="section-title split-text" style="font-size: clamp(2.5rem, 5vw, 4rem);">Operational <span class="text-gradient">Code</span></h2>
+      </div>
+
+      <div class="bento-grid stagger-box" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+        <div class="glass-panel stagger-item" style="justify-content: flex-start; align-items: center; text-align: center; padding: 48px 32px;">
+          <div class="bento-icon" style="width: 64px; height: 64px; font-size: 1.5rem; margin-bottom: 24px;"><i class="fas fa-bullseye"></i></div>
+          <h3 class="text-gradient" style="margin-bottom: 16px; font-size: 1.8rem;">Mission</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">At VTD Fitness Solutions Private Limited, our mission is to create a structured and accessible fitness ecosystem that nurtures strength, discipline, and excellence among individuals across all levels. We aim to provide professional guidance, modern training systems, and opportunities that help athletes and fitness enthusiasts achieve their highest potential.</p>
+        </div>
+        <div class="glass-panel stagger-item" style="justify-content: flex-start; align-items: center; text-align: center; padding: 48px 32px;">
+          <div class="bento-icon" style="width: 64px; height: 64px; font-size: 1.5rem; margin-bottom: 24px;"><i class="fas fa-eye"></i></div>
+          <h3 class="text-gradient" style="margin-bottom: 16px; font-size: 1.8rem;">Vision</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;">Our vision, inspired by our founder Inturi Rekha, is to build a strong and healthy nation by developing high-quality fitness profiles, with a special focus on empowering talent in Telangana and across India. We strive to uplift women in fitness and sports, encouraging confidence, independence, and leadership through strength-based training.
+</p>
+        </div>
+        <div class="glass-panel stagger-item" style="justify-content: flex-start; align-items: center; text-align: center; padding: 48px 32px;">
+          <div class="bento-icon" style="width: 64px; height: 64px; font-size: 1.5rem; margin-bottom: 24px;"><i class="fas fa-gem"></i></div>
+          <h3 class="text-gradient" style="margin-bottom: 16px; font-size: 1.8rem;">Values</h3>
+          <p style="color: var(--text-secondary); line-height: 1.6;"> Our core values are rooted in discipline, consistency, integrity, and empowerment. We believe in leading by example, creating equal opportunities, and fostering a culture where hard work and determination transform individuals into champions, both in fitness and in life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overriden padding-top to pull this block directly up against the Core Imperatives block -->
+  <section class="section-padding" style="padding-top: 16px; text-align: center;">
+    <div class="container anim-el">
+      <div class="glass-panel" style="padding: 80px 40px; border-radius: 40px;">
+        <h2 class="split-text" style="font-size: clamp(2rem, 4vw, 4rem); margin-bottom: 24px;">
+          Engage <span class="text-gradient">With Us</span>
+        </h2>
+        <div class="magnetic-wrap">
+          <a href="contact.html" class="btn btn--primary btn--lg">
+            <span>Open Channel</span> <i class="fas fa-satellite-dish"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="script.js"></script>
+</body>
+</html>
